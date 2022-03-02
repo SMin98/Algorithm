@@ -1,4 +1,4 @@
-package BOJ.SILVER;
+package BOJ.Data_Structure;
 
 import java.util.Scanner;
 import java.util.LinkedList;
@@ -25,10 +25,12 @@ public class O_1158 {
                 int val = q.poll();
                 q.offer(val);
             }
+
             sb.append(q.poll()).append(", ");
         }
 
         sb.append(q.poll()).append('>');
         System.out.println(sb);
     }
+
 }
