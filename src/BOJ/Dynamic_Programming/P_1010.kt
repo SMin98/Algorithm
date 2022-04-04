@@ -3,7 +3,7 @@ package BOJ.Dynamic_Programming
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
-val list = Array(30) { IntArray(30) { 0 } }
+private val list = Array(30) { IntArray(30) { 0 } }
 fun main() {
     val br = BufferedReader(InputStreamReader(System.`in`))
 
@@ -14,7 +14,7 @@ fun main() {
     }
 }
 
-fun combi(m: Int, n: Int): Int {
+private fun combi(m: Int, n: Int): Int {
     if (list[m][n] > 0) {
         return list[m][n]
     }
