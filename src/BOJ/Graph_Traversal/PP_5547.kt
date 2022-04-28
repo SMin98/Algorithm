@@ -10,6 +10,7 @@ private lateinit var isOut: Array<BooleanArray>
 private lateinit var list: Array<IntArray>
 private val queue = LinkedList<Pair<Int, Int>>()
 
+//육각 모양이라서 짝수/홀수 나눠서 검사
 private val oddList =
     arrayOf(arrayOf(-1, 0), arrayOf(0, -1), arrayOf(1, 0), arrayOf(1, 1), arrayOf(0, 1), arrayOf(1, -1))
 private val evenList =
@@ -26,6 +27,7 @@ fun main() {
     list = Array(h + 2) { IntArray(w + 2) }
     isOut = Array(h + 2) { BooleanArray(w + 2) }
 
+    //테두리 만들고 -> 건물일때 인접하는 바깥 갯수
     for (i in 1..h) {
         st = StringTokenizer(br.readLine())
         for (j in 1..w) {
@@ -46,10 +48,7 @@ fun main() {
             }
         }
     }
-//private val oddList =
-//    arrayOf(arrayOf(-1, 0), arrayOf(0, -1), arrayOf(1, 0), arrayOf(1, 1), arrayOf(0, 1), arrayOf(1, -1))
-//private val evenList =
-//    arrayOf(arrayOf(-1, -1), arrayOf(0, -1), arrayOf(1, 0), arrayOf(-1, 1), arrayOf(0, 1), arrayOf(-1, 0))
+
     var cnt = 0
     for (i in 1..h) {
         for (j in 1..w) {
